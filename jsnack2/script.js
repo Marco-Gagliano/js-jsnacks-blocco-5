@@ -71,8 +71,10 @@ const zucchine = [
 const zucchineCorte = [];
 const zucchineLunghe = [];
 
+const zucchinePesoCorte = [];
+const zucchinePesoLunghe = [];
 
-// Dividi in due array separati le zucchine che misurano meno o più di 15cm. Infine stampa 
+// Dividi in due array separati le zucchine che misurano meno o più di 15cm.
 
 for (let key in zucchine) {
 
@@ -80,7 +82,14 @@ for (let key in zucchine) {
 
   zucchine[key] = (zucchineMisura.lunghezzaZucchina >= 15) ? zucchineLunghe.push(zucchineMisura.varietàZucchina) : zucchineCorte.push(zucchineMisura.varietàZucchina);
 
+  // Infine stampa separatamente quanto pesano i due gruppi di zucchine.
+
+  zucchine[key] = (zucchineMisura.lunghezzaZucchina >= 15) ? zucchinePesoLunghe.push(zucchineMisura.pesoZucchina) : zucchinePesoCorte.push(zucchineMisura.pesoZucchina);
+
 }
 
 console.log(zucchineLunghe);
 console.log(zucchineCorte);
+
+console.log(zucchinePesoLunghe);
+console.log(zucchinePesoCorte);
