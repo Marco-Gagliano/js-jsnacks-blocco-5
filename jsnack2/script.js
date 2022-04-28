@@ -88,8 +88,29 @@ for (let key in zucchine) {
 
 }
 
+document.getElementById("elenco-zucchine-lunghe").innerHTML = zucchineLunghe
+document.getElementById("elenco-zucchine-corte").innerHTML = zucchineCorte
+
 console.log(zucchineLunghe);
 console.log(zucchineCorte);
-
 console.log(zucchinePesoLunghe);
 console.log(zucchinePesoCorte);
+
+
+function sommaLunghe(total, zucchinePesoLunghe) {
+
+  return total + Math.round(zucchinePesoLunghe);
+
+}
+
+
+// Il metodo reduce() riduce una matrice di valori a un solo valore
+document.getElementById("peso-totale-zucchine-lunghe").innerHTML = zucchinePesoLunghe.reduce(sommaLunghe, 0) + " grammi";
+
+
+function sommaCorte(total, zucchinePesoCorte) {
+
+  return total + Math.round(zucchinePesoCorte);
+}
+// Il metodo reduce() riduce una matrice di valori a un solo valore
+document.getElementById("peso-totale-zucchine-corte").innerHTML = zucchinePesoCorte.reduce(sommaCorte, 0) + " grammi";
