@@ -76,6 +76,7 @@ function sumPeso() {
     sum += parseInt(i.pesoZucchina);
   }
 
+  document.getElementById("somma-zucchine").innerHTML = sum;
   console.log(sum);
 
 }
