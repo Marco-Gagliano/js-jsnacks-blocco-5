@@ -66,3 +66,18 @@ const zucchine = [
   },
 ]
 
+
+sumPeso();
+
+function sumPeso() {
+  let sum = 0;
+
+  for (let i of zucchine) {
+    sum += parseInt(i.pesoZucchina);
+  }
+
+  console.log(sum);
+
+}
+  
+
